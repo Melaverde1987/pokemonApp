@@ -1,0 +1,16 @@
+<div>Name: {{dataByName?.name}}</div>
+<div>
+    <img src="{{dataByName?.sprites.front_default}}" alt="">
+</div>
+
+<div>Order: {{dataByName?.order}}</div>
+<div style="font-size: 2rem;">Abilities: </div>
+<div *ngFor="let ability of dataByName?.abilities">{{ability.ability.name}}</div>
+<div style="font-size: 2rem;">Type: </div>
+<div *ngFor="let type of dataByName?.types">{{type.type.name}}</div>
+<div style="font-size: 2rem;">Stats: </div>
+<div *ngFor="let stat of dataByName?.stats">{{stat.stat.name}}</div>
+<div style="font-size: 2rem;">Moves: </div>
+<div *ngFor="let move of dataByName?.moves">{{move.move.name}}</div>
+<div style="font-size: 2rem;">Evolves to: </div>
+<div *ngFor="let evolution of evolutionChain">{{evolution.species_name}} -- {{evolution.trigger_name}} -- {{evolution.min_level}}</div>

@@ -1,0 +1,11 @@
+<div style="padding: 2rem 0;" *ngFor="let pokemon of detailData | paginate : { itemsPerPage: 20, currentPage: page, totalItems: totalPokemons }">
+    <div>Pokemon name:</div>
+    <a routerLink="{{pokemon.name}}">
+        {{pokemon.name}}
+    </a>
+    <div>
+        <img src="{{pokemon.sprites.front_default}}" alt="">
+    </div>
+</div>
+
+<pagination-controls (pageChange)="page = $event; detailData = []; getAllPokemons()"></pagination-controls>
