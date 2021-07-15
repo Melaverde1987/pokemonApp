@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Century Gothic', Helvetica, Tahoma, sans-serif;
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+
+    a:hover {
+        color:rgb(209, 209, 209)
+    }
+
+img {
+    object-fit: cover;
+    max-width: 100%;
+    /*height: 100%;
+    width: 100%;*/
+}
+
+.my_text {
+    color: rgb(44, 161, 182);
+}
+
+.my_bg {
+    background-color: rgb(3, 123, 144);
+}
+
+.ngx-pagination .current {
+    background: rgb(3, 123, 144) !important;
+    border-radius: 1rem;
+}
+
+a:not([href]):not([class]), a:not([href]):not([class]):hover {
+    border-radius: 1rem;
+}

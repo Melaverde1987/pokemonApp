@@ -10,6 +10,7 @@ import { HttpClient } from '@angular/common/http'; //added
 })
 export class PokemonListComponent implements OnInit {
   title = 'PokemonList';
+  description = 'Information about more than 1 000 pokemons';
   detailData: any = [];
   page = 1;
   totalPokemons: number;
