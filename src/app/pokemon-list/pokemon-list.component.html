@@ -1,24 +1,13 @@
 <div class="container my-4">
-    <div class="row py-5 my-5 px-5">
-        <div class="col-12 col-lg-6 my-5 px-5">
-            <div class="banner_text text-uppercase fw-bold">All pokemons <br> in <span class="my_text">one App</span> here</div>
-            <div class="text-muted my-3">{{description}}</div>
-        </div>
-        <div class="col-12 col-lg-6 my-5 px-5 pt-5">
-            <img src="./assets/images/pokemon3.png" alt="">
-        </div>
-    </div>
-    <div class="row text-center">
+    <banner></banner>
+    <div class="row text-center my-4">
         <div class="col-12 col-md-6 col-lg-3 p-2" *ngFor="let pokemon of detailData | paginate : { itemsPerPage: 20, currentPage: page, totalItems: totalPokemons }">
             <div class="py-5 my_hover card">
-                <div class="fs-5 fw-bold">{{pokemon.name}}</div>
                 <div>
-                    <img src="{{pokemon.sprites.front_default}}" alt="">
+                    <img class="bg-white rounded-circle p-3" src="{{pokemon.sprites.front_default}}" alt="">
                 </div>
-                <div class="d-flex justify-content-center py-3">
-                    <div class="line"></div>
-                </div>
-                <a class="text-muted text-muted-hover" routerLink="{{pokemon.name}}">more details</a>
+                <div class="fs-5 fw-bold capitalize mt-2">{{pokemon.name}}</div>
+                <a class="text-muted text-muted-hover mb-2" routerLink="{{pokemon.name}}">more details</a>
             </div>
         </div>
     </div>

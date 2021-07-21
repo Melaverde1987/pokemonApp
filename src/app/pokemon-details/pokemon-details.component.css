@@ -1,0 +1,9 @@
+.margin_top {
+    margin-top: -4.5rem;
+}
+
+.line {
+    width: 8rem;
+    height: 2px;
+    background-color: rgb(3, 123, 144);
+}

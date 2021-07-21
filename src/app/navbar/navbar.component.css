@@ -5,3 +5,10 @@
 .logo {
     font-family: 'Poiret One';
 }
+
+/*responsive*/
+@media (max-width: 575.98px) { 
+    .letter_spacing {
+        letter-spacing: 0.1rem;
+    }
+}

@@ -1,17 +1,27 @@
 <div class="container my-4 text-center">
-    <div class="fs-3">{{dataByName?.name}}</div>
     <div class="my-5">
-        <img src="{{dataByName?.sprites.front_default}}" alt="">
+        <img class="bg-white p-3 rounded-circle margin_top" src="{{dataByName?.sprites.front_default}}" alt="">
+    </div>
+    <div class="fs-3 my-5"><span class="capitalize">{{dataByName?.name}}</span> #{{dataByName?.id}} 
+        <div class="d-flex justify-content-center my-2">
+            <div class="line"></div>
+        </div>
     </div>
 
-    <div class="my-2"><span class="text-muted fw-bold">Order: </span>{{dataByName?.order}}</div>
+    <div class="row my-3">
+        <div class="my-2 col-6">
+            <div class="d-inline" *ngFor="let type of dataByName?.types">{{type.type.name}}</div>
+            <div class="text-muted fw-bold">Type</div>
+        </div>
+        <div class="my-2 col-6 border-start">
+            <div class="d-inline" *ngFor="let evolution of evolutionChain; last as isLast">{{evolution.species_name}}<div class="d-inline" *ngIf="!isLast">, </div>
+                <ng-template #other_content></ng-template></div>
+            <div class="text-muted fw-bold">Evolvutions</div>
+        </div>
+    </div>
     <div class="my-2">
         <span class="text-muted fw-bold d-inline">Abilities: </span>
         <div class="d-inline" *ngFor="let ability of dataByName?.abilities">{{ability.ability.name}}</div>
-    </div>
-    <div class="my-2">
-        <span class="text-muted fw-bold">Type: </span>
-        <div class="d-inline" *ngFor="let type of dataByName?.types">{{type.type.name}}</div>
     </div>
     <div class="my-2">
         <span class="text-muted fw-bold">Stats: </span>
@@ -24,9 +34,5 @@
         <div class="d-inline" *ngFor="let move of dataByName?.moves; last as isLast">{{move.move.name}}<div class="d-inline" *ngIf="!isLast">, </div>
             <ng-template #other_content></ng-template></div>
     </div>
-    <div class="my-2">
-        <span class="text-muted fw-bold">Evolves to: </span>
-        <div class="d-inline" *ngFor="let evolution of evolutionChain; last as isLast">{{evolution.species_name}}<div class="d-inline" *ngIf="!isLast">, </div>
-            <ng-template #other_content></ng-template></div>
-    </div>
+    <div class="my-2"><span class="text-muted fw-bold">Order: </span>{{dataByName?.order}}</div>
 </div>

@@ -1,5 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
-
+/* general styles */
 * {
     margin: 0;
     padding: 0;
@@ -26,14 +25,20 @@ img {
     width: 100%;*/
 }
 
+/* my styles */
 .my_text {
-    color: rgb(44, 161, 182);
+    color: rgb(3, 123, 144);
 }
 
 .my_bg {
     background-color: rgb(3, 123, 144);
 }
 
+.capitalize {
+    text-transform: capitalize;
+}
+
+/*rewrite angular styles*/
 .ngx-pagination .current {
     background: rgb(3, 123, 144) !important;
     border-radius: 1rem;
