@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { HttpClientModule } from '@angular/common/http'; //added
-import { NgxPaginationModule } from 'ngx-pagination'; // added
+import { NgxPaginationModule } from 'ngx-pagination'; // added pagination
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,7 +23,7 @@ import { BannerComponent } from './banner/banner.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule, // added
-    NgxPaginationModule
+    NgxPaginationModule // added
   ],
   providers: [],
   bootstrap: [AppComponent]

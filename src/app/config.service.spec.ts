@@ -13,4 +13,19 @@ describe('ConfigService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  //my test
+  it("should create a complete url with limit and offset", () => {
+    const limit = 10;
+    const offset = 10;
+    service.getData(limit, offset);
+    expect(service.getData).toBeTruthy();
+  });
+
+  //my test
+  it("should create a complete url with pokemon name", () => {
+    const name = 'pikachu';
+    service.getDetailsData(name);
+    expect(service.getData).toBeTruthy();
+  });
 });

@@ -15,7 +15,6 @@ export class PokemonListComponent implements OnInit {
   totalPokemons: number;
 
   constructor(private config: ConfigService, private http: HttpClient) {
-    
   }
 
   ngOnInit(): void {
@@ -33,6 +32,6 @@ export class PokemonListComponent implements OnInit {
         });
       });
     })
+    return this.detailData;
   }
-
 }

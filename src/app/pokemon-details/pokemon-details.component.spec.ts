@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { PokemonDetailsComponent } from './pokemon-details.component';
+
+import { RouterTestingModule } from '@angular/router/testing'; //testing
+
 
 describe('PokemonDetailsComponent', () => {
   let component: PokemonDetailsComponent;
@@ -8,6 +10,7 @@ describe('PokemonDetailsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [RouterTestingModule],
       declarations: [ PokemonDetailsComponent ]
     })
     .compileComponents();
@@ -21,5 +24,13 @@ describe('PokemonDetailsComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  //my test
+  it("should create evolution", () => {
+    let id = 3;
+    component.getEvolution(id);
+    expect(component.getEvolution).toBeTruthy();
+    expect(component.getEvolution.length).toBeGreaterThanOrEqual(1);
   });
 });
